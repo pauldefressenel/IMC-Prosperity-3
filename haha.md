@@ -1,4 +1,4 @@
-# My Trading Strategies
+# Round 1
 
 ## Overview
 This repository contains different trading strategies for the IMC competition.
