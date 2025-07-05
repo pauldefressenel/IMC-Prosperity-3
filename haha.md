@@ -1,37 +1,21 @@
 # Round 1
 
-## Algorithm Challenge
+## Algorithm challenge
 
-The first three tradable products are introduced: `Rainforest Resin`, `Kelp`, and `Squid Ink`.
+The first three tradable products are introduced: : `Rainforest Resin` , `Kelp`, and `Squid Ink`. The value of the `Rainforest Resin` has been stable throughout the history of the archipelago, the value of `Kelp` has been going up and down over time, and the value of `Squid Ink` can also swing a bit, but some say there is a pattern to be discovered in its prize progression. All algorithms uploaded in the tutorial round will be processed and generate results instantly, so you can experiment with different programs and strategies.
 
-- The value of **Rainforest Resin** has been stable throughout the history of the archipelago.
-- The value of **Kelp** has been fluctuating over time.
-- The value of **Squid Ink** can also swing, but some say there is a hidden pattern in its price progression.
+Position limits for the newly introduced products:
 
-All algorithms uploaded in the tutorial round will be processed and generate results instantly, so you can experiment with different programs and strategies.
-
-### Position Limits
 - `RAINFOREST_RESIN`: 50
 - `KELP`: 50
 - `SQUID_INK`: 50
 
 ### Hint
 
-**Squid Ink** can be very volatile, with prices experiencing large swings. Making a two-sided market or holding large positions can be risky for such an instrument.
+Squid Ink can be a very volatile product with price having large swings. Making a two-sided market or carrying position can be risky for such an instrument. However, with large swings comes large reversion. Squid Ink prices show more tendency to revert short term swings in price.
 
-However, with large swings comes large reversion. Squid Ink prices tend to revert short-term swings.
+A metric to keep track of the size of deviation/swing from recent average could help in trading profitable positions.
 
-> 💡 **Tip:**  
-> A useful metric to track is the size of the deviation or swing from the recent average. This could help identify profitable trading opportunities.
+## Manual challenge
 
----
-
-## Manual Challenge
-
-You will have the chance to perform a series of trades in foreign island currencies.
-
-- The first trade will convert your **SeaShells** into a foreign currency.
-- The last trade will convert the foreign currency back into **SeaShells**.
-- Everything in between is up to you.
-
-Give some thought to the trade sequence, as there may be an opportunity to walk away with more shells than you started with.
+You get the chance to do a series of trades in some foreign island currencies. The first trade is a conversion of your SeaShells into a foreign currency, the last trade is a conversion from a foreign currency into SeaShells. Everything in between is up to you. Give some thought to what series of trades you would like to do, as there might be an opportunity to walk away with more shells than you arrived with.
