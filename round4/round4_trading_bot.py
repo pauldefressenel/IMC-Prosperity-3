@@ -10,12 +10,8 @@ from typing import Any, Dict, List, Optional
 from typing import TypeAlias
 from math import log, sqrt, exp
 
-# JSON type alias definition.
 JSON: TypeAlias = dict[str, "JSON"] | list["JSON"] | str | int | float | bool | None
 
-# -----------------------------------------------------------------------------
-# Logger: Used for capturing output (simplified version).
-# -----------------------------------------------------------------------------
 class Logger:
     def __init__(self) -> None:
         self.logs = ""
@@ -54,9 +50,8 @@ PARAMS = {
         "fair_value": 10000,
         "take_width": 1,
         "clear_width": 0,
-        # for making
-        "disregard_edge": 1,  # disregards orders for joining or pennying within this value from fair
-        "join_edge": 2,  # joins orders within this edge
+        "disregard_edge": 1, 
+        "join_edge": 2, 
         "default_edge": 4,
         "soft_position_limit": 10
     },
@@ -88,7 +83,6 @@ PARAMS = {
     }
 }
 
-# Constants for the Black–Scholes calculations.
 _p = 0.3275911
 _a1 = 0.254829592
 _a2 = -0.284496736
@@ -97,13 +91,11 @@ _a4 = -1.453152027
 _a5 = 1.061405429
 _sqrt2 = math.sqrt(2.0)
 
-# Thresholds and multipliers used in the strategy.
 MIN_IV_STD_DEV_THRESHOLD = 0.0002
 IV_STD_DEV_MULTIPLIER = 0.3
 GAMMA_MEAN_FACTOR = 0.15
 VANNA_MEAN_FACTOR = 0.15
 
-# Black–Scholes model: pricing and Greeks.
 class BlackScholes:
     @staticmethod
     def norm_cdf(x):
